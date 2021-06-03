@@ -53,7 +53,7 @@ a {
     text-decoration: none
 }
 
-/* Start Template Colors */
+/* Start Root */
 
 :root {
     --theme: #62bfe6;
@@ -63,7 +63,22 @@ a {
     --white: #fff
 }
 
-/* End Template Colors */
+.btn1,
+nav,
+.app img,
+#mixedSlider .MS-controls button,
+.container img,
+[type=submit],
+[type=reset],
+.contact__list i {
+    -webkit-transition: .3s;
+    -ms-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+
+/* End Root */
 
 /* Home Start */
 
@@ -99,14 +114,9 @@ a {
     border: 1px solid var(--white);
     background: var(--white);
     color: var(--black);
-    padding: 20px 50px;
+    padding: 20px 34px;
     font-weight: bold;
     border-radius: 4px;
-    -webkit-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
     text-transform: uppercase
 }
 
@@ -127,11 +137,6 @@ nav {
     -moz-transform: translateX(-50%);
     transform: translateX(-50%);
     text-align: center;
-    -webkit-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s
 }
 
 nav a {
@@ -157,7 +162,17 @@ nav a:hover,
     bottom: auto
 }
 
-@media (max-width: 550px) {
+@media (max-width: 768px) {
+    .home__text b {
+        font-size: 100px
+    }
+}
+
+@media (max-width: 480px) {
+    .home__text b {
+        font-size: 70px
+    }
+
     .fixed {
         padding: 0;
         width: 100%;
@@ -174,7 +189,7 @@ nav a:hover,
 #gallery,
 .mission,
 #contact {
-    padding: 70px 10px;
+    padding: 70px 0;
     text-align: center
 }
 
@@ -213,7 +228,7 @@ nav a:hover,
 .about__info__right small,
 .mission__info small {
     display: block;
-    margin: 25px 0;
+    margin: 14px 0;
     font-weight: bold;
     color: var(--black);
     font-size: 14px
@@ -246,11 +261,6 @@ nav a:hover,
 
 .app img {
     border-radius: 5px;
-    -webkit-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
     margin: 4px 0;
     width: fit-content;
     cursor: pointer
@@ -264,7 +274,7 @@ nav a:hover,
     box-shadow: 0 0 5px rgba(0, 0, 0, .5)
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .about__info {
         flex-direction: column
     }
@@ -280,40 +290,6 @@ nav a:hover,
 
     .app img {
         margin: 4px auto
-    }
-}
-
-@media (max-width: 500px) {
-    .mySpan {
-        font-size: 16px
-    }
-
-    .myH2 {
-        font-size: 50px
-    }
-
-    .about__info__right b {
-        font-size: 24px
-    }
-}
-
-@media (max-width: 400px) {
-    .myH2 {
-        font-size: 40px
-    }
-}
-
-@media (max-width: 300px) {
-    .myH2 {
-        font-size: 30px
-    }
-
-    .about__info__right b {
-        font-size: 20px
-    }
-
-    .btn1 {
-        padding: 20px 30px
     }
 }
 
@@ -346,7 +322,7 @@ nav a:hover,
 
 #mixedSlider .MS-content .ms-item {
     display: inline-block;
-    margin: 0 10px;
+    margin: 8px;
     width: 32%;
     vertical-align: top;
     overflow: hidden;
@@ -376,20 +352,15 @@ nav a:hover,
     margin: 10px 0;
     color: var(--theme);
     background: transparent;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    transition: .3s
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
     #mixedSlider .MS-content .ms-item {
         width: 49%
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
     #mixedSlider .MS-content .ms-item {
         width: 100%;
         margin: 0
@@ -400,21 +371,17 @@ nav a:hover,
 
 /* Start Gallery */
 
-#gallery {
-    padding: 70px 0
-}
-
 .tabs {
+    margin-top: 20px;
     display: flex;
-    justify-content: space-around;
-    margin: auto;
-    width: 50%
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .tabs li {
     cursor: pointer;
     color: var(--gray2);
-    margin: 25px 0;
+    margin: 10px;
     list-style: none;
     position: relative
 }
@@ -445,6 +412,7 @@ nav a:hover,
 #gallery3,
 #gallery4 {
     padding: 0;
+    margin-top: 20px;
     display: none
 }
 
@@ -458,11 +426,6 @@ nav a:hover,
 }
 
 .container img {
-    -webkit-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
     width: 33.333333333%
 }
 
@@ -474,7 +437,7 @@ nav a:hover,
     filter: grayscale(1)
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .container {
         flex-wrap: wrap;
         justify-content: center
@@ -485,32 +448,19 @@ nav a:hover,
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
     .tabs {
         width: 100%
     }
 
     .container img {
-        margin: 6px 0;
         width: 100%
-    }
-}
-
-@media (max-width: 500px) {
-    .tabs {
-        flex-direction: column
-    }
-
-    .tabs li {
-        margin: 10px
     }
 }
 
 /* End Gallery */
 
 /* Start Mission */
-
-.mission {}
 
 .mission p {
     width: 80%;
@@ -546,20 +496,15 @@ nav a:hover,
     margin: 20px 0
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .mission p {
-        width: 100%
+        width: 96%
     }
 
     .mission__info,
     .mission__info > div {
-        text-align: center;
         flex-wrap: wrap;
-        padding: 0
-    }
-
-    .btn3 {
-        margin: 20px auto
+        padding: 0 5px
     }
 }
 
@@ -569,7 +514,7 @@ nav a:hover,
 
 #contact {
     background: url(../img/contact/footerbg.jpg) bottom/cover;
-    height: 825px;
+    height: 110vh;
 }
 
 form {
@@ -597,13 +542,8 @@ textarea {
 
 [type=submit],
 [type=reset] {
-    -webkit-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
-    padding: 20px 50px;
-    margin: 10px;
+    padding: 12px 40px;
+    margin: 5px;
     font-weight: bold;
     border-radius: 4px;
     color: white;
@@ -615,11 +555,6 @@ textarea {
 .contact__list i {
     margin: 10px;
     color: var(--white);
-    -webkit-transition: .3s;
-    -ms-transition: .3s;
-    -moz-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
     cursor: pointer
 }
 
@@ -632,15 +567,14 @@ textarea {
     color: var(--gray)
 }
 
-@media (max-width: 900px) {
-    form {
-        width: 100%
+@media (max-width: 768px) {
+    #contact {
+        height: fit-content
     }
-}
 
-@media (max-width: 600px) {
     form {
-        margin: 60px auto
+        width: 94%;
+        margin: 50px auto
     }
 
     form > div {
@@ -654,20 +588,6 @@ textarea {
 
     [type=email] {
         margin-top: 15px
-    }
-
-    [type=submit],
-    [type=reset] {
-        padding: 10px 40px;
-    }
-}
-
-@media (max-width: 400px) {
-
-    [type=submit],
-    [type=reset] {
-        margin: 3px 0;
-        font-size: 16px
     }
 }
 

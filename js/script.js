@@ -74,7 +74,7 @@ $(document).ready(function () { // Start Coding Here
     });
 
     li.click(function () {
-        $(".btn2, .btn3, [type=submit], [type=reset]").css({
+        $(".btn1, .btn2, .btn3, [type=submit], [type=reset]").css({
             "background": $(this).css("background"),
             "color": $(this).css("color")
         })
